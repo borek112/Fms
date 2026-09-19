@@ -6,6 +6,7 @@ export interface GpsFix {
   accuracy: number;
   speed: number;
   heading: number;
+  altitude?: number;
   timestamp: number;
 }
 
@@ -29,6 +30,7 @@ export function useGps(enabled = true) {
           accuracy: position.coords.accuracy,
           speed: position.coords.speed ?? 0,
           heading: position.coords.heading ?? Number.NaN,
+          altitude: position.coords.altitude ?? undefined,
           timestamp: position.timestamp,
         });
       },
