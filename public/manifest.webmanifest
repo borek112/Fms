@@ -1,0 +1,16 @@
+{
+  "name": "FMS Precision 3.0 — Precision Farm Management",
+  "short_name": "FMS 3.0",
+  "description": "Precyzyjny system zarządzania gospodarstwem rolnym — GIS, Field Pilot GNSS, dziennik, magazyn, finanse, dzierżawy.",
+  "id": "/",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0a1120",
+  "theme_color": "#10b981",
+  "categories": ["productivity", "business", "utilities"],
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
