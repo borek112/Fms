@@ -35,7 +35,7 @@ export function useSerialNmea() {
         accuracy: snapshot.hdop != null ? Math.max(0.3, snapshot.hdop * 2) : 3,
         speed: snapshot.speedKmh != null ? snapshot.speedKmh / 3.6 : -1,
         heading: snapshot.heading != null ? snapshot.heading : NaN,
-        altitude: snapshot.altitude,
+        altitude: snapshot.altitude ?? undefined,
         timestamp: Date.now(),
       });
     }
