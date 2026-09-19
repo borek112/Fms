@@ -1,0 +1,2 @@
+import { useCallback, useRef } from 'react';
+export function useSpeechAlerts(enabled = true) { const last = useRef<Record<string, number>>({}); const speak = useCallback((text: string, key = text) => { if (!enabled || typeof window === 'undefined' || !('speechSynthesis' in window)) return; const now = Date.now(); if (now - (last.current[key] ?? 0) < 5000) return; last.current[key] = now; window.speechSynthesis.cancel(); window.speechSynthesis.speak(new SpeechSynthesisUtterance(text)); }, [enabled]); return { speak }; }
